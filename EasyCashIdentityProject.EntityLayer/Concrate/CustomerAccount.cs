@@ -14,5 +14,8 @@ namespace EasyCashIdentityProject.EntityLayer.Concrate
         public decimal CustomerAccountBalance { get; set; } // hesap bakiyesi
         public string BankBranch { get; set; } // hesabın hangi subeye bağlı olduğunun adı
 
+        public int AppUserID { get; set; }
+        public AppUser AppUser { get; set; }
+
     }
 }
