@@ -20,7 +20,6 @@ namespace EasyCashIdentityProject.BusinessLayer.ValidationRules.AppUserValidatio
             RuleFor(x => x.ConfirmPassword).NotEmpty().WithMessage("Şifre tekrar alanı boş geçilemez.");
             RuleFor(x => x.Name).MaximumLength(30).WithMessage("En fazla 30 karakter girişi yapınız.");
             RuleFor(x => x.Name).MinimumLength(2).WithMessage("En az 2 karakter girişi yapınız.");
-            RuleFor(x => x.Password).MinimumLength(6).WithMessage("En az 6 karakterli bir şifre girişi yapınız");
             RuleFor(x => x.ConfirmPassword).Equal(y=>y.Password).WithMessage("Şifrenizz eşleşmiyor.");
             RuleFor(x => x.Email).EmailAddress().WithMessage("Lütfen geçerli bir mail adresi giriniz.");
         }
